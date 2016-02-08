@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>List due date:</strong>
+  <%= @list_name.list_due_date %>
+</p>
+
+<%= link_to 'Edit', edit_list_name_path(@list_name) %> |
+<%= link_to 'Back', list_names_path %>

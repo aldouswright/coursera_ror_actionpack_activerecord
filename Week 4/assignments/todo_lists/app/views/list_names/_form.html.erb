@@ -1,0 +1,21 @@
+<%= form_for(@list_name) do |f| %>
+  <% if @list_name.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list_name.errors.count, "error") %> prohibited this list_name from being saved:</h2>
+
+      <ul>
+      <% @list_name.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :list_due_date %><br>
+    <%= f.date_select :list_due_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
